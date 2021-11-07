@@ -1,32 +1,14 @@
-# Copyright 2015 Google Inc. All Rights Reserved.
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+from pywebio import *
+from pywebio.output import *
+from pywebio.input import *
 
-# [START gae_flex_quickstart]
-from flask import Flask
-
-
-app = Flask(__name__)
-
-
-@app.route('/')
-def hello():
-    """Return a friendly HTTP greeting."""
-    return 'Hello World!'
-
-
-if __name__ == '__main__':
-    # This is used when running locally only. When deploying to Google App
-    # Engine, a webserver process such as Gunicorn will serve the app.
-    app.run(host='127.0.0.1', port=8080, debug=True)
-# [END gae_flex_quickstart]
+def main():
+    '''
+    An interactive web app that takes user's name 
+    and output hello <username> on the webpage
+    '''
+    name = input("Hello! We look forward to working with you. What’s your name?")
+    print("Nice to meet you " + name + "!")
+    appdescription = input("Please describe the nature of the mobile app you would like to have built? ")
+    print("OK, thank you " + "!") 
+    appname = input("Have you thought about an app name? Respond Yes or No ")
